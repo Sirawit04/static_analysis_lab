@@ -59,7 +59,7 @@ def test_unknown_coupon_warning():
     service = InvoiceService()
     invoice = make_basic_invoice(coupon="INVALID")
 
-    total, warnings = service.compute_total(invoice)
+    warnings = service.compute_total(invoice)
 
     assert "Unknown coupon" in warnings
 
